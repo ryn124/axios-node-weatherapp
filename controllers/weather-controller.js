@@ -3,7 +3,10 @@
 var axios = require('axios')
 // middleware
 function lowerCaseQuery(req, res, next){
-  return req.query.toLowerCase();
+  var query = req.query.address
+  console.log(query)
+  req.query.address = query.toLowerCase();
+  next();
 }
 function getWeather (req, res){
   console.log(req.query)
