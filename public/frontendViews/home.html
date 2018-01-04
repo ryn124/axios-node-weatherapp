@@ -1,0 +1,45 @@
+<div class="container">
+  <h2 class="text-center">Weather App</h2>
+  <div class="form-group">
+    <!-- <label>Where do you live?</label> -->
+    <input type="text" class="form-control" ng-model="location" placeholder="Where do you live?">
+  </div>
+  <button class="btn btn-primary center-block" ng-click="getWeather()">Get Weather</button>
+  <div class="results" ng-show="resultsPresent">
+    <div class="row">
+      <div class="col-md-4 block">
+        <div class="row">
+          <p class="text-center"><strong>{{temp}}</strong></p>
+        </div>
+        <div class="row">
+          <h4 class="text-center">Temperature</h3>
+        </div>
+      </div>
+
+      <div class="col-md-4 block">
+        <div class="row">
+          <p class="text-center"><strong>{{humidity}}</strong></p>
+        </div>
+        <div class="row">
+          <h4 class="text-center">Humidity</h3>
+        </div>
+      </div>
+
+      <div class="col-md-4 block">
+        <div class="row">
+          <p class="text-center"><strong>{{rain}}%</strong></p>
+        </div>
+        <div class="row">
+          <h4 class="text-center">Chance of Rain</h3>
+        </div>
+      </div>
+    </div>
+
+    <p>The forecast for today is:
+      <strong>{{forecast}}</strong>
+    </p>
+    <p>The forecast for the week is:
+      <strong>{{weekly}}</strong>
+    </p>
+  </div>
+</div>
